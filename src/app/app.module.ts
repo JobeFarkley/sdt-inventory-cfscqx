@@ -12,10 +12,11 @@ import { InventorySearchComponent } from './inventory-search/inventory-search.co
 import { InvetoryDetailsComponent } from './invetory-details/invetory-details.component';
 import { RepairRequestComponent } from './repair-request/repair-request.component';
 import { LoginService } from './login.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InvetoryDetailsComponent, RepairRequestComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InvetoryDetailsComponent, RepairRequestComponent, LoginComponent ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]
 })
