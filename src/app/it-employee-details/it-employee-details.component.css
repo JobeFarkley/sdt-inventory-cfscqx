@@ -2,19 +2,46 @@
   display: block;
 }
 #employee {
-  width: max-content;
-  position: fixed;
+  width: 20%;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: inline-grid;
-  border: solid;
+  float: left;
+ 
 }
 
 #databaseArea {
-  position: static;
-  display: inline-block;
+  float: left;
+  width: 60%;
   padding: 0rem;
+  
+}
+
+#searchArea{
+  float:right;
+}
+
+#detailsArea{
+  float: left;
+}
+
+#desplayDataArea{
+  width: 100%;
+  border: solid;
+  float: inline-end;
+  }
+
+table{
+  width: 100%;
+  
+}
+
+tr{
+  
+  border: solid;
+}
+th{
+  width: fit-content;
   border: solid;
 }
