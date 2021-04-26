@@ -1,0 +1,34 @@
+#databaseArea {
+  float: left;
+  width: 60%;
+  padding: 0rem;
+  
+}
+
+#searchArea{
+  float:right;
+}
+
+#detailsArea{
+  float: left;
+}
+
+#desplayDataArea{
+  width: 100%;
+  border: solid;
+  float: inline-end;
+  }
+
+table{
+  width: 100%;
+  
+}
+
+tr{
+  
+  border: solid;
+}
+th{
+  width: fit-content;
+  border: solid;
+}
