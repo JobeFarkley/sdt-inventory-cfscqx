@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { USERS } from "./mock-data";
+import { User } from "./model/user";
 
 @Injectable()
 export class LoginService {
-
-  constructor() { }
-
+  userList: User[] = USERS;
+  constructor() {}
 }
