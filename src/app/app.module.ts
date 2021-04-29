@@ -14,10 +14,11 @@ import { RepairRequestComponent } from './repair-request/repair-request.componen
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]
 })
