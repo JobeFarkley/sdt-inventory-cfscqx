@@ -15,7 +15,7 @@ import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './filter.pipe';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
