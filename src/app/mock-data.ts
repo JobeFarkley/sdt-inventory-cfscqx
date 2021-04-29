@@ -2,24 +2,32 @@ export let USERS: any = [
   {
     UID: 523645,
     username: "Samuel.Dailey",
+    firstName: "Samuel",
+    lastName: "Dailey",
     password: "thereisnospoon",
     permissions: "ITEmp"
   },
   {
     UID: 877530,
     username: "Dalin.Christianson",
+    firstName: "Dalin",
+    lastName: "Christianson",
     password: "",
     permissions: ""
   },
   {
     UID: 225549,
     username: "Matt.Wilson",
+    firstName: "Matt",
+    lastName: "Wilson",
     password: "",
     permissions: ""
   },
   {
     UID: 189023,
     username: "Kole.Dorbor",
+    firstName: "Kole",
+    lastName: "Dorbor",
     password: "",
     permissions: ""
   }
