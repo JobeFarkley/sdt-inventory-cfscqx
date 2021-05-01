@@ -1,0 +1,46 @@
+<h2>Equipment Request</h2>
+<p></p>
+<span>Name:</span>
+
+<!-- <input type="text" id="name" name="name"> -->
+<input type="text" #myInput0 (click)="myInput0"/>
+<p></p>
+
+<span>Employee ID:</span>
+<input type="text" #myInput1 (click)="myInput1"/>
+
+<p></p>
+
+<span>E-Mail:</span>
+<input type="text" #myInput2 (click)="myInput2"/>
+<p></p>
+
+<span>Workspace Location:</span>
+<input type="text" #myInput3 (click)="myInput3"/>
+<p></p>
+
+
+<label for="equipment">Select Equipment:</label>
+
+<select name="equipment" id="equipment">
+  <option value="n/a">Select an option</option>
+  <option value="headset">Headset</option>
+  <option value="webcam">Webcam</option>
+  <option value="mouse">Mouse</option>
+  <option value="keyboard">Keyboard</option>
+  <option value="monitor">Monitor</option>
+  <option value="scanner">Scanner</option>
+</select>
+
+<p></p>
+
+<span>Reason for equipment:</span>
+<input type="text" #myInput5 (click)="myInput5"/>
+
+<p></p>
+
+<div>
+  <button >Submit</button>
+  <button >Cancel</button>
+</div>
+
