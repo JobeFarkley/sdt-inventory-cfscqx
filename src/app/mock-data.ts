@@ -12,24 +12,24 @@ export let USERS: any = [
     username: "Dalin.Christianson",
     firstName: "Dalin",
     lastName: "Christianson",
-    password: "",
-    permissions: ""
+    password: "123456",
+    permissions: "ITHead"
   },
   {
     UID: 225549,
     username: "Matt.Wilson",
     firstName: "Matt",
     lastName: "Wilson",
-    password: "",
-    permissions: ""
+    password: "123456",
+    permissions: "Emp"
   },
   {
     UID: 189023,
     username: "Kole.Dorbor",
     firstName: "Kole",
     lastName: "Dorbor",
-    password: "",
-    permissions: ""
+    password: "123456",
+    permissions: "ITEmp"
   }
 ];
 
