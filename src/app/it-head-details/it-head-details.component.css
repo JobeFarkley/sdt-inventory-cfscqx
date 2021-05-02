@@ -35,14 +35,13 @@ tr{
 td{
   width: rem;
 }
-th{
-}
 .table-bordered{
   color: black;
 }
 
 .form-group{
   width: 20rem;
+  margin-top: 10px;
 }
 
 

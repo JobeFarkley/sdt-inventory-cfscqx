@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup} from '@angular/forms';
-import {ITEMS} from '../../items';
+import {DEVICES} from '../mock-data';
+import {Device} from '../model/device';
 
-interface Item{
-  sn: number;
-  quantity: number;
-  name: string;
-  location : string;
-}
+
 
 @Component({
   selector: 'app-it-head-details',
@@ -20,51 +16,47 @@ export class ITHeadDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-items: Item[] = ITEMS;
-  selectedItem: Item;
+devices: Device[] = DEVICES;
+  selecteddevice: Device;
   form: FormGroup;
   searchText: string;
 
-  sn: number;
-  quantity: number;
-  name: string;
-  location: string;
+  DID: number;
+  deviceName: string;
+  assignedUID: number;
 
-  addItem(){
-    const newItem: Item = {
-      sn: this.sn,
-      quantity: this.quantity,
-      name: this.name,
-      location: this.location
+  addDevice(){
+    const newDevice: Device = {
+      DID: this.DID,
+      deviceName: this.deviceName,
+      assignedUID: this.assignedUID,
     }
-    this.items.push(newItem);
+    this.devices.push(newDevice);
   }
-  deleteItem(item: Item){
-       this.items.splice(this.items.indexOf(item),1)
+  deleteDevice(device: Device){
+       this.devices.splice(this.devices.indexOf(device),1)
   }
   
 
-  editItem(item: Item) {
-    this.selectedItem = item;
+  editDevice(device: Device) {
+    this.selecteddevice = device;
     this.form = new FormGroup({
-      sn: new FormControl(item.sn),
-      quantity: new FormControl(item.quantity),
-      name: new FormControl(item.name),
-      location: new FormControl(item.location)
+      DID: new FormControl(device.DID),
+      deviceName: new FormControl(device.deviceName),
+      assignedUID: new FormControl(device.assignedUID),
     });
       
   }
 
  save() {
-    this.selectedItem.sn= this.form.value.sn;
-    this.selectedItem.quantity= this.form.value.quantity;
-    this.selectedItem.name= this.form.value.name;
-    this.selectedItem.location= this.form.value.location;
+    this.selecteddevice.DID= this.form.value.DID;
+    this.selecteddevice.deviceName= this.form.value.deviceName;
+    this.selecteddevice.assignedUID= this.form.value.assignedUID;
     this.cancel();
   }
 
   cancel() {
-    this.selectedItem = null;
+    this.selecteddevice = null;
     this.form = null;
   }
 
