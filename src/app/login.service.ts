@@ -20,6 +20,9 @@ export class LoginService {
     }
     else if(userList[i].password == password){
       loggedIn = userList[i];
+      if(loggedIn != null){
+        console.log(loggedIn.username + " logged in.")
+      }
     }
     else logInError();
   }
@@ -27,6 +30,9 @@ export class LoginService {
   /**Returns loggedIn user to null */
   logOut(){
     loggedIn = null;
+    if(loggedIn == null){
+      console.log("User successfully logged out.")
+    }
   }
 
   /** Finds user by username and returns their index on the userList */
