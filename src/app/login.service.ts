@@ -14,31 +14,31 @@ export class LoginService {
 
   /** Call this to change the currently user loggedIn */
   logIn(username: string, password: string){
-    var i = findUser(username);
+    var i = this.findUser(username);
     if(i == -1){
-      logInError();
+      this.logInError();
     }
-    else if(userList[i].password == password){
-      loggedIn = userList[i];
-      if(loggedIn != null){
-        console.log(loggedIn.username + " logged in.")
+    else if(this.userList[i].password == password){
+      this.loggedIn = this.userList[i];
+      if(this.loggedIn != null){
+        console.log(this.loggedIn.username + " logged in.")
       }
     }
-    else logInError();
+    else this.logInError();
   }
 
   /**Returns loggedIn user to null */
   logOut(){
-    loggedIn = null;
-    if(loggedIn == null){
+    this.loggedIn = null;
+    if(this.loggedIn == null){
       console.log("User successfully logged out.")
     }
   }
 
   /** Finds user by username and returns their index on the userList */
   findUser(username: string){
-    for(var i = 0; i < userList.length; i++){
-      if(userList[i].username == username){
+    for(var i = 0; i < this.userList.length; i++){
+      if(this.userList[i].username == username){
         return i;
       }
     }
