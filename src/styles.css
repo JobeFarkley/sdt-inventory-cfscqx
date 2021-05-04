@@ -3,3 +3,4 @@ body{
   max-width: 65rem;
   margin: auto;
 }
+@import "~bootstrap/dist/css/bootstrap.min.css";
