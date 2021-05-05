@@ -22,10 +22,10 @@
         *ngIf="(users | filter: searchText).length > 0; else noResults">
         <thead class="table-dark">
           <tr>
-            <th scope="col">UID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Permissions</th>
+            <th scope="col" [appSort]="users" data-order="desc" data-name="UID">UID</th>
+            <th scope="col" [appSort]="users" data-order="desc" data-name="firstName">First Name</th>
+            <th scope="col" [appSort]="users" data-order="desc" data-name="lastName">Last Name</th>
+            <th scope="col" [appSort]="users" data-order="desc" data-name="permissions">Permissions</th>
             <th scope="col">Action</th>
 
             <th></th>

@@ -21,10 +21,9 @@
       <table class="table  table-striped" *ngIf="(devices | filter: searchText).length > 0; else noResults">
         <thead class="table-dark">
           <tr>
-            <th scope="col"></th>
-            <th scope="col">DID</th>
-            <th scope="col">Device Name</th>
-            <th scope="col">AssignedUID</th>
+            <th scope="col" [appSort]="devices" data-order="desc" data-name="DID">DID</th>
+            <th scope="col" [appSort]="devices" data-order="desc" data-name="deviceName">Device Name</th>
+            <th scope="col" [appSort]="devices" data-order="desc" data-name="assignedUID">AssignedUID</th>
             <th scope="col">Action</th>
             <th></th>
 
@@ -32,7 +31,6 @@
         </thead>
         <tbody>
           <tr *ngFor="let device of devices | filter: searchText; let i = index">
-            <th scope="row"></th>
             <td>{{device.DID}}</td>
             <td>{{device.deviceName}}</td>
             <td>{{device.assignedUID}}</td>
