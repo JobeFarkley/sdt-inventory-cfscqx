@@ -17,10 +17,11 @@ import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './filter.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RepairSearchComponent } from './repair-search/repair-search.component';
+import { SortDirective } from './sort.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent, SortDirective ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]
 })
