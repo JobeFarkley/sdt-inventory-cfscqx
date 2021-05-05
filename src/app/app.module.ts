@@ -17,9 +17,10 @@ import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './filter.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RepairSearchComponent } from './repair-search/repair-search.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]

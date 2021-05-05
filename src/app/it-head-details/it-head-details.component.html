@@ -35,9 +35,9 @@
           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
         </svg>
         <h1>IT HEAD</h1>
-        <button class="nav-link active" id="v-pills-inventory-tab" data-bs-toggle="pill" data-bs-target="#v-pills-inventory" type="button" role="tab" aria-controls="v-pills-inventory" aria-selected="true">Inventory</button>
-        <button class="nav-link" id="v-pills-employees-tab" data-bs-toggle="pill" data-bs-target="#v-pills-employees" type="button" role="tab" aria-controls="v-pills-employees" aria-selected="false">Employees</button>
-        <button class="nav-link" id="v-pills-repairs-tab" data-bs-toggle="pill" data-bs-target="#v-pills-repairs" type="button" role="tab" aria-controls="v-pills-repairs" aria-selected="false"> Repairs</button>
+        <button class="nav-link active" id="v-pills-inventory-tab" data-bs-toggle="pill" data-bs-target="#v-pills-inventory" type="button" role="tab" aria-controls="v-pills-inventory" aria-selected="true" routerLink ="/repair-search" routerLinkActive ="active">Inventory</button>
+        <button class="nav-link" id="v-pills-employees-tab" data-bs-toggle="pill" data-bs-target="#v-pills-employees" type="button" role="tab" aria-controls="v-pills-employees" aria-selected="false" routerLink ="/repair-search" routerLinkActive ="active">Employees</button>
+        <button class="nav-link" id="v-pills-repairs-tab" data-bs-toggle="pill" data-bs-target="#v-pills-repairs" type="button" role="tab" aria-controls="v-pills-repairs" aria-selected="false" routerLink ="/repair-search" routerLinkActive ="active"> Repairs</button>
 
       </div>
       <div class="tab-content" id="v-pills-tabContent">
@@ -49,18 +49,21 @@
             <div class="card-body">
 
 
-            <div class="form-group">
-              <input class="form-control" type="text" [(ngModel)]="DID" placeholder="Device ID">
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="text" [(ngModel)]="deviceName"  placeholder="Device Name">
-            </div>
-            <div class="form-group">
-              <input class="form-control" type="text" [(ngModel)]="assignedUID"  placeholder="Assigned UID">
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary" (click)="addDevice()" >Add Item</button>
-            </div>
+              <div class="form-group">
+                <input class="form-control" type="text" [(ngModel)]="DID" placeholder="Device ID">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" [(ngModel)]="deviceName"  placeholder="Device Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" [(ngModel)]="assignedUID"  placeholder="Assigned UID">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" (click)="addDevice()" >Add Item</button>
+              </div>
+
+            <router-outlet></router-outlet>
+
               <h2 class="card-title">Inventory</h2>
 
               <div class="form-group mb-4">
@@ -152,7 +155,7 @@
     </div>
 
 
-
+    
 
 
 
