@@ -8,8 +8,15 @@ export class LoginService {
   userList: User[] = USERS;
 
   /** Currently logged in user */
-
-  loggedIn: User;
+  guest: User = {
+    UID: 0,
+    username: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+    permissions: 0
+  };
+  loggedIn: User = this.guest;
 
   constructor() {}
 
@@ -26,10 +33,10 @@ export class LoginService {
     } else this.logInError();
   }
 
-  /**Returns loggedIn user to null */
+  /**Returns loggedIn user to empty guest login */
   logOut() {
-    this.loggedIn = null;
-    if (this.loggedIn == null) {
+    this.loggedIn = this.guest;
+    if (this.loggedIn == this.guest) {
       console.log("User successfully logged out.");
     }
   }
