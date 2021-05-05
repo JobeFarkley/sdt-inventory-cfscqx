@@ -1,9 +1,9 @@
-
-  <div id="employee">
-    <h2>Tim Green</h2>
-    <button>Work Order Request</button>
-    <br>
-    <button> Manage Work Order</button>
-  </div>
+<div id="employee">
+  <h2>Tim Green</h2>
+  <button routerLink ="/repair-request" routerLinkActive ="active">Work Order Request</button>
+  <br>
+  <button routerLink ="/repair-search" routerLinkActive ="active"> Manage Work Order</button>
+</div>
 
 <app-search></app-search>
+<router-outlet></router-outlet>
