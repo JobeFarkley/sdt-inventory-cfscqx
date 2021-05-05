@@ -22,11 +22,11 @@
         *ngIf="(repairs | filter: searchText).length > 0; else noResults">
         <thead class="table-dark">
           <tr>
-            <th scope="col">RID</th>
-            <th scope="col">DID</th>
+            <th scope="col" [appSort]="repairs" data-order="desc" data-name="RID">RID</th>
+            <th scope="col" [appSort]="repairs" data-order="desc" data-name="DID">DID</th>
             <th scope="col">Issue</th>
             <th scope="col">Fix</th>
-            <th scope="col">Status</th>
+            <th scope="col" [appSort]="repairs" data-order="desc" data-name="status">Status</th>
             <th scope="col">Action</th>
             <th></th>
 
