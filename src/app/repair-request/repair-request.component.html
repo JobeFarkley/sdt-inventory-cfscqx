@@ -1,36 +1,13 @@
 <div id="repairRequest">
   <h2>Work Order Request</h2>
 
-  <p></p>
-  <span>Name:</span>
-
-  <!-- <input type="text" id="name" name="name"> -->
-  <input type="text" #myInput0 (click)="myInput0"/>
-  <p></p>
-
-  <span>Employee ID:</span>
-  <input type="text" #myInput1 (click)="myInput1"/>
-
-  <p></p>
-
-  <span>E-Mail:</span>
-  <input type="text" #myInput2 (click)="myInput2"/>
-  <p></p>
-
-  <span>Workspace Location:</span>
-  <input type="text" #myInput3 (click)="myInput3"/>
-  <p></p>
-
-
-  <p></p>
-
-  <span>Work Order Description:</span>
-  <input type="text" #myInput4 (click)="myInput4"/>
-
-  <p></p>
+  <input type="text" [(ngModel)]="DID" placeholder="DID">
+  <br><br>
+  <textarea type="text" [(ngModel)]="issue" placeholder="Issue" row="5"></textarea>
 
   <div>
-    <button >Submit</button>
+    <button (click)="addRepair()">Submit</button>
     <button >Cancel</button>
   </div>
 </div>
+ 
