@@ -1,5 +1,5 @@
 <body>
-  <div>
+  <div *ngIf = "user.permissions == 'none'">
     <h1>Log In</h1>
     <div class="card align-items-center">
       <div class="card-body">
@@ -30,5 +30,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div *ngIf = "user.permissions == 'ITEmp'">
+    <app-it-employee-details></app-it-employee-details>
+  </div>
+  <div *ngIf = "user.permissions == 'ITHead'">
+    <app-it-head-details></app-it-head-details>
   </div>
 </body>
