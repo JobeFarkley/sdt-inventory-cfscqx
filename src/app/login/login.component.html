@@ -37,4 +37,7 @@
   <div *ngIf = "user.permissions == 'ITHead'">
     <app-it-head-details></app-it-head-details>
   </div>
+  <div *ngIf="user.permissions == 'Emp'">
+    <app-employee-details></app-employee-details>
+  </div>
 </body>
