@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {REPAIRS} from '../mock-data';
+import {Repair} from '../model/repair';
 
 @Component({
   selector: 'app-repair-request',
@@ -7,23 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepairRequestComponent implements OnInit {
 
-  // myInput0 = ""
-  // myInput1 = ""
-  // myInput2 = ""
-  // myInput3 = ""
-  // myInput4 = ""
-
-  // submitWorkOrder() {
-  //   WORK[0].name = this.myInput0;
-  //   WORK[1].empID = this.myInput1;
-  //   WORK[2].email = this.myInput2;
-  //   WORK[3].location = this.myInput3;
-  //   WORK[4].description = this.myInput4;
-  
-  // }
+ 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  repairs: Repair[] = REPAIRS;
+  RID: number = 56888;
+  DID: number;
+  issue: string;
+  fix: string = "";
+  status: string = "";
+  
+
+
+  addRepair(){
+    const newRepair: Repair = {
+      RID: ++this.RID,
+      DID: this.DID,
+      issue: this.issue,
+      fix: this.fix,
+      status: this.status
+    }
+    this.repairs.push(newRepair);
   }
 
 }

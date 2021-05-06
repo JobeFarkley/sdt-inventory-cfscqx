@@ -1,17 +1,43 @@
 <body>
-  <h1>Log In</h1>
-  <div class="card align-items-center">
-    <div class="card-body">
-      <div class="form-group">
-        <input class="form-control" type="text" placeholder="Username" #username>
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="text" placeholder="Password" #password>
-      </div>
-      <button class="btn btn-primary" (click)="logIn(username.value, password.value)">Log In</button>
-      <div>
-        <h4>User: {{ user.username }}</h4>
+  <div *ngIf = "user.permissions == 'none'">
+    <h1>Log In</h1>
+    <div class="card align-items-center">
+      <div class="card-body">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Username"
+            #username
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Password"
+            #password
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+          (click)="logIn(username.value, password.value)"
+        >
+          Log In
+        </button>
+        <div>
+          <h4>User: {{ user.username }}</h4>
+        </div>
       </div>
     </div>
+  </div>
+  <div *ngIf = "user.permissions == 'ITEmp'">
+    <app-it-employee-details></app-it-employee-details>
+  </div>
+  <div *ngIf = "user.permissions == 'ITHead'">
+    <app-it-head-details></app-it-head-details>
+  </div>
+  <div *ngIf="user.permissions == 'Emp'">
+    <app-employee-details></app-employee-details>
   </div>
 </body>

@@ -44,11 +44,11 @@ repairs: Repair[] = REPAIRS;
   }
 
  save() {
-    this.selectedRepair.DID= this.form.value.DID;
-    this.selectedRepair.DID= this.form.value.DID;
-    this.selectedRepair.DID= this.form.value.DID;
-    this.selectedRepair.DID= this.form.value.DID;
-    this.selectedRepair.DID= this.form.value.DID;
+    this.selectedRepair.RID= this.form.value.RID,
+    this.selectedRepair.DID= this.form.value.DID,
+    this.selectedRepair.issue= this.form.value.issue;
+    this.selectedRepair.fix= this.form.value.fix;
+    this.selectedRepair.status= this.form.value.status;
     this.cancel();
   }
 

@@ -18,9 +18,13 @@ import { FilterPipe } from './filter.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RepairSearchComponent } from './repair-search/repair-search.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { SortDirective } from './sort.directive';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent, InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent ],
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent,
+          InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent, SortDirective ],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]
 })
