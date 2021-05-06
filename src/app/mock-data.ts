@@ -1,44 +1,27 @@
 export let USERS: any = [
   {
     UID: 523645,
-    username: "Samuel.Dailey",
-    firstName: "Samuel",
-    lastName: "Dailey",
-    password: "thereisnospoon",
-    permissions: "ITEmp"
+    username: "ITEmp.Test",
+    firstName: "IT",
+    lastName: "Employee",
+    password: "123456",
+    permissions: 3
   },
   {
     UID: 877530,
-    username: "Dalin.Christianson",
-    firstName: "Dalin",
-    lastName: "Christianson",
-
-
-
+    username: "ITHead.Test",
+    firstName: "IT",
+    lastName: "Head",
     password: "123456",
-    permissions: "ITHead"
-
+    permissions: 4
   },
   {
     UID: 225549,
-    username: "Matt.Wilson",
-    firstName: "Matt",
-    lastName: "Wilson",
-
-
+    username: "Employee.Test",
+    firstName: "Employee",
+    lastName: "Test",
     password: "123456",
-    permissions: "Emp"
-
-  },
-  {
-    UID: 189023,
-    username: "Kole.Dorbor",
-    firstName: "Kole",
-    lastName: "Dorbor",
-
-    password: "123456",
-    permissions: "ITEmp"
-
+    permissions: 2
   }
 ];
 

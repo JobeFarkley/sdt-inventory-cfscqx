@@ -7,38 +7,44 @@ export class LoginService {
   /**List of recognised Users */
   userList: User[] = USERS;
 
-  /** Currently logged in user */ 
-  loggedIn: User;
+  /** Currently logged in user */
+  guest: User = {
+    UID: 0,
+    username: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+    permissions: 0
+  };
+  loggedIn: User = this.guest;
 
   constructor() {}
 
   /** Call this to change the currently user loggedIn */
-  logIn(username: string, password: string){
+  logIn(username: string, password: string) {
     var i = this.findUser(username);
-    if(i == -1){
+    if (i == -1) {
       this.logInError();
-    }
-    else if(this.userList[i].password == password){
+    } else if (this.userList[i].password == password) {
       this.loggedIn = this.userList[i];
-      if(this.loggedIn != null){
-        console.log(this.loggedIn.username + " logged in.")
+      if (this.loggedIn != null) {
+        console.log(this.loggedIn.username + " logged in.");
       }
-    }
-    else this.logInError();
+    } else this.logInError();
   }
 
-  /**Returns loggedIn user to null */
-  logOut(){
-    this.loggedIn = null;
-    if(this.loggedIn == null){
-      console.log("User successfully logged out.")
+  /**Returns loggedIn user to empty guest login */
+  logOut() {
+    this.loggedIn = this.guest;
+    if (this.loggedIn == this.guest) {
+      console.log("User successfully logged out.");
     }
   }
 
   /** Finds user by username and returns their index on the userList */
-  findUser(username: string){
-    for(var i = 0; i < this.userList.length; i++){
-      if(this.userList[i].username == username){
+  findUser(username: string) {
+    for (var i = 0; i < this.userList.length; i++) {
+      if (this.userList[i].username == username) {
         return i;
       }
     }
@@ -48,8 +54,7 @@ export class LoginService {
   /**Error for when the username or password is incorect.
    * Currently just sends a message to the console.
    */
-  logInError(){
+  logInError() {
     console.log("Invalid username or password");
   }
 }
-
