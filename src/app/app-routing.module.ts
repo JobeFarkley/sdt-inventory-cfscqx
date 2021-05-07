@@ -9,6 +9,8 @@ import { ITEmployeeDetailsComponent } from "./it-employee-details/it-employee-de
 import { ITHeadDetailsComponent } from "./it-head-details/it-head-details.component";
 import { RepairSearchComponent } from "./repair-search/repair-search.component";
 import { RepairRequestComponent } from "./repair-request/repair-request.component";
+import { AddDeviceComponent } from "./add-device/add-device.component";
+
 
 const routes: Routes = [
   { path: "employee-details", component: EmployeeDetailsComponent },
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path: "it-employee-details", component: ITEmployeeDetailsComponent },
   { path: "it-head-details", component: ITHeadDetailsComponent },
   { path: "repair-search", component: RepairSearchComponent },
-  { path: "repair-request", component: RepairRequestComponent }
+  { path: "repair-request", component: RepairRequestComponent },
+  { path: "add-device", component: AddDeviceComponent }
 ];
 
 @NgModule({

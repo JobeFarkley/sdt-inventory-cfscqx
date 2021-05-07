@@ -1,0 +1,15 @@
+<div class="card mx-auto">
+  <h1 class="card-title">Add Device</h1>
+  <div class="card-body">
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="DID" placeholder="Enter DID">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="deviceName" placeholder="Enter Device Name">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="addDevice()">Add Device</button>
+      <button class ="btn btn-danger" routerLink="/inventory-search"> Go Back</button>
+    </div>
+  </div>
+</div>
