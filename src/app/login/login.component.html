@@ -10,27 +10,27 @@
             placeholder="Username"
             #username
           />
-        </div>
-        <div class="form-group">
-          <input
+      </div>
+      <div class="form-group">
+        <input
             class="form-control"
             type="text"
             placeholder="Password"
             #password
           />
-        </div>
-        <button
+      </div>
+      <button
           class="btn btn-primary"
           (click)="logIn(username.value, password.value)"
         >
           Log In
         </button>
-        <div>
-          <h4>User: {{ user.username }}</h4>
-        </div>
+      <div>
+        <h4>User: {{ user.username }}</h4>
       </div>
     </div>
   </div>
+   </div> 
   <div *ngIf = "user.permissions == 3">
     <app-it-employee-details></app-it-employee-details>
   </div>
@@ -39,5 +39,5 @@
   </div>
   <div *ngIf="user.permissions == 2">
     <app-employee-details></app-employee-details>
-  </div>
+  </div> -->
 </body>

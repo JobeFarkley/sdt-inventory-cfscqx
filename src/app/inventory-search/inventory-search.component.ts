@@ -14,7 +14,7 @@ export class InventorySearchComponent implements OnInit {
 
   ngOnInit() {
   }
-    devices: Device[] = DEVICES;
+  devices: Device[] = DEVICES;
   selectedDevice: Device;
   form: FormGroup;
   searchText: string;

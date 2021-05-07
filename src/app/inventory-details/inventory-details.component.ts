@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {DEVICES} from '../mock-data';
+import {Device} from '../model/device';
+import {FormControl,FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-inventory-details',
@@ -7,27 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryDetailsComponent implements OnInit {
 
-  // myInput = ""
-  // myInput1 = ""
-  // myInput2 = ""
-  // myInput3 = ""
-  // equipment = ""
-  // myInput5 = ""
- 
+ devices: Device[] = DEVICES;
 
-  
-  // submitRequest() {
-  //    EQUIPMENT[0].name = this.myInput;
-  //    EQUIPMENT[1].empID = this.myInput1;
-  //    EQUIPMENT[2].email = this.myInput2;
-  //    EQUIPMENT[3].location = this.myInput3;
-  //    EQUIPMENT[4].equipment = this.equipment;
-  //    EQUIPMENT[5].reason = this.myInput5;
-  // }  
+ DID: number;
+ deviceName : string;
+ AssignnedUID: string;
+  selectedDevice: Device;
+  form: FormGroup;
+  searchText: string;
   
   constructor() { }
 
   ngOnInit() {
   }
 
+  requestDevice(device: Device){
+      this.selectedDevice = device;
+      this.form = new FormGroup({
+      DID: new FormControl(device.DID),
+      deviceName: new FormControl(device.deviceName),
+      assignedUID: new FormControl(device.assignedUID),
+
+    });
+  }
+   save() {
+    this.selectedDevice.DID= this.form.value.DID;
+    this.selectedDevice.deviceName= this.form.value.deviceName;
+    this.selectedDevice.assignedUID= this.form.value.assignedUID;
+    this.cancel();
+  }
+
+  cancel() {
+    this.selectedDevice = null;
+    this.form = null;
+  }
 }

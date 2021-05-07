@@ -20,11 +20,13 @@ import { RepairSearchComponent } from './repair-search/repair-search.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SortDirective } from './sort.directive';
+import { AddDeviceComponent } from './add-device/add-device.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
   declarations: [ AppComponent, HelloComponent, EmployeeDetailsComponent, ITEmployeeDetailsComponent, ITHeadDetailsComponent, EmployeeSearchComponent,
-          InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent, SortDirective ],
+          InventorySearchComponent, InventoryDetailsComponent, RepairRequestComponent, LoginComponent, SearchComponent, FilterPipe, RepairSearchComponent, SortDirective, AddDeviceComponent, AddEmployeeComponent,],
   bootstrap:    [ AppComponent ],
   providers: [LoginService]
 })
