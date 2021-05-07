@@ -1,10 +1,10 @@
 <body>
-  <!--  <div *ngIf = "user.permissions == 'none'"> -->
-  <h1>Log In</h1>
-  <div class="card align-items-center">
-    <div class="card-body">
-      <div class="form-group">
-        <input
+  <div *ngIf = "user.permissions == 0">
+    <h1>Log In</h1>
+    <div class="card align-items-center">
+      <div class="card-body">
+        <div class="form-group">
+          <input
             class="form-control"
             type="text"
             placeholder="Username"
@@ -30,14 +30,14 @@
       </div>
     </div>
   </div>
-  <!--  </div> -->
-  <!--  <div *ngIf = "user.permissions == 'ITEmp'">
+   </div> 
+  <div *ngIf = "user.permissions == 3">
     <app-it-employee-details></app-it-employee-details>
   </div>
-  <div *ngIf = "user.permissions == 'ITHead'">
+  <div *ngIf = "user.permissions == 4">
     <app-it-head-details></app-it-head-details>
   </div>
-  <div *ngIf="user.permissions == 'Emp'">
+  <div *ngIf="user.permissions == 2">
     <app-employee-details></app-employee-details>
   </div> -->
 </body>
