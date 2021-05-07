@@ -1,28 +1,37 @@
 export let USERS: any = [
   {
     UID: 523645,
-    username: "ITEmp.Test",
-    firstName: "IT",
-    lastName: "Employee",
-    password: "123456",
-    permissions: 3
-  },
-  {
-    UID: 877530,
-    username: "ITHead.Test",
-    firstName: "IT",
-    lastName: "Head",
+    username: "Dalin.Christianson",
+    firstName: "Dalin",
+    lastName: "Christianson",
     password: "123456",
     permissions: 4
   },
   {
+    UID: 877530,
+    username: "Kole.Dorbor",
+    firstName: "Kole",
+    lastName: "Dorbor",
+    password: "123456",
+    permissions: 1
+  },
+  {
     UID: 225549,
-    username: "Employee.Test",
-    firstName: "Employee",
-    lastName: "Test",
+    username: "Sam.Dailey",
+    firstName: "Sam",
+    lastName: "Dailey",
+    password: "123456",
+    permissions: 2
+  },
+    {
+    UID: 225549,
+    username: "Matt.Wilson",
+    firstName: "Matt",
+    lastName: "Wilson",
     password: "123456",
     permissions: 2
   }
+
 ];
 
 export let DEVICES: any = [
@@ -47,16 +56,19 @@ export let DEVICES: any = [
     assignedUID: 357895
   },
   {
-    DID: 461379,
+    DID: 46137,
     deviceName: "Mobile Workstation #2",
+    assignedUID: "N/A"
   },
   {
-    DID: 865492,
+    DID: 86549,
     deviceName: "Mobile Workstation #3",
+    assignedUID: "N/A"
   },
   {
-    DID: 778899,
+    DID: 77889,
     deviceName: "Workstation Tablet #2",
+    assignedUID: "N/A"
   },
 ];
 

@@ -19,7 +19,6 @@ h2{
   margin-bottom: 10px; 
 
 }
-
 .input-group{
   width: 20rem;
   
@@ -42,6 +41,11 @@ td{
 .form-group{
   width: 20rem;
   margin-top: 10px;
+}
+i{
+  margin: 20px;
+  color: blue;
+  font-size: 2rem;
 }
 
 
