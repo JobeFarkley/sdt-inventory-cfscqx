@@ -32,9 +32,7 @@ table{
 tr{
   width: 10rem;
 }
-td{
-  width: rem;
-}
+
 .table-bordered{
   color: black;
 }
