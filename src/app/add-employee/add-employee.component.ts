@@ -26,7 +26,7 @@ export class AddEmployeeComponent implements OnInit {
   addUser(){
     const newUser: User = {
 
-      UID: +this.nextUID,
+      UID: ++this.nextUID,
       firstName: this.firstName,
       lastName: this.lastName,
       permissions: this.permissions,
