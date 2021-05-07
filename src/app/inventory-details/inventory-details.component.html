@@ -34,7 +34,7 @@
             <td>{{device.deviceName}}</td>
             <td>{{device.assignedUID}}</td>
             <td>
-              <button [disabled]="!(device.assignedUID == '')"  type="button" class="btn btn-sm btn-outline-primary" (click)="requestDevice(device)">Request</button>
+              <button [disabled]="!(device.assignedUID == 'N/A' || device.assignedUID == '0')"  type="button" class="btn btn-sm btn-outline-primary" (click)="requestDevice(device)">Request</button>
             </td>
 
           </tr>

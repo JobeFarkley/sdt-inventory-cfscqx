@@ -24,7 +24,7 @@ export class AddDeviceComponent implements OnInit {
     const newDevice: Device = {
       DID: this.DID,
       deviceName: this.deviceName,
-      assignedUID: this.assignedUID
+      assignedUID: 0
     }
     this.devices.push(newDevice)
   }

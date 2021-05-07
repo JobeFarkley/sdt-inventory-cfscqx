@@ -49,14 +49,17 @@ export let DEVICES: any = [
   {
     DID: 461379,
     deviceName: "Mobile Workstation #2",
+    assignedUID: "N/A"
   },
   {
     DID: 865492,
     deviceName: "Mobile Workstation #3",
+    assignedUID: "N/A"
   },
   {
     DID: 778899,
     deviceName: "Workstation Tablet #2",
+    assignedUID: "N/A"
   },
 ];
 
