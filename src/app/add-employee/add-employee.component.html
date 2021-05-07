@@ -1,0 +1,18 @@
+<div class="card mx-auto">
+  <h1 class="card-title">Add Employee</h1>
+  <div class="card-body">
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="firstName" placeholder="Enter First Name">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="lastName" placeholder="Enter Last Name">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="permissions" placeholder="Enter Permissions">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="addUser()">Add Employee</button>
+      <button class ="btn btn-danger" routerLink="/employee-search"> Go Back</button>
+    </div>
+  </div>
+</div>
