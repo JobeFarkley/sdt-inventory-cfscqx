@@ -45,7 +45,19 @@ export let DEVICES: any = [
     DID: 85478,
     deviceName: "Mobile Workstation",
     assignedUID: 357895
-  }
+  },
+  {
+    DID: 461379,
+    deviceName: "Mobile Workstation #2",
+  },
+  {
+    DID: 865492,
+    deviceName: "Mobile Workstation #3",
+  },
+  {
+    DID: 778899,
+    deviceName: "Workstation Tablet #2",
+  },
 ];
 
 export let REPAIRS: any = [
@@ -78,3 +90,16 @@ export let REPAIRS: any = [
     status: "Resolved"
   }
 ];
+
+export let REQUESTS: any = [
+  {
+    RID: 938272,
+    UID: 225549,
+    DID: 461379
+  },
+  {
+    RID: 456123,
+    UID: 523645,
+    DID: 865492
+  }
+]
